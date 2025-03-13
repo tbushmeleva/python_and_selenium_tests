@@ -1,1 +1,1 @@
-# python_and_selenium_tests
+Автотесты по курсу (Python + Selenium).
