@@ -1,4 +1,5 @@
-from selenium.webdriver.common.by import By
+import selenium.webdriver
+from selenium import webdriver
 import time
 from .pages.main_page import MainPage
 
