@@ -1,8 +1,8 @@
 import selenium.webdriver
 from selenium import webdriver
 import time
-from .pages.main_page import MainPage
-from .pages.login_page import LoginPage
+from pages.main_page import MainPage
+from pages.login_page import LoginPage
 
 def test_login_link_should_be_correct(browser):
     link = "http://selenium1py.pythonanywhere.com/accounts/login/"

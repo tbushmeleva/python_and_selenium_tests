@@ -1,7 +1,7 @@
 import selenium.webdriver
 from selenium import webdriver
 import time
-from .pages.main_page import MainPage
+from pages.main_page import MainPage
 
 def test_guest_can_go_to_login_page(browser):
     link = "http://selenium1py.pythonanywhere.com/"
