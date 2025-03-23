@@ -18,3 +18,24 @@ def test_guest_can_add_product_to_basket(browser, links):
     page = ProductPage(browser, links)
     page.open()
     page.add_product_to_the_basket_with_solve()
+
+def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
+    link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/"
+    page = ProductPage(browser, link)
+    page.open()
+    page.click_add_to_cart()
+    page.should_not_be_success_message()
+
+def test_guest_cant_see_success_message(browser):
+    link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/"
+    page = ProductPage(browser, link)
+    page.open()
+    page.should_not_be_success_message()
+
+def test_message_disappeared_after_adding_product_to_basket(browser):
+    link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/"
+    page = ProductPage(browser, link)
+    page.open()
+    page.click_add_to_cart()
+    page.should_disappear_success_message()
+
