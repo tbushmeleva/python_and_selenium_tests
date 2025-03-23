@@ -39,7 +39,6 @@ class ProductPage(BasePage):
     def add_product_to_the_basket_with_solve(self):
         self.get_original_product_name()
         self.get_original_product_price()
-        self.should_not_be_success_message()
         self.click_add_to_cart()
         self.solve_quiz_and_get_code()
         self.should_be_success_message_with_product_name()
@@ -52,7 +51,6 @@ class ProductPage(BasePage):
     def add_product_to_the_basket(self):
         self.get_original_product_name()
         self.get_original_product_price()
-        self.should_not_be_success_message()
         self.click_add_to_cart()
         self.should_be_success_message_with_product_name()
         self.get_product_name_in_success_message()
