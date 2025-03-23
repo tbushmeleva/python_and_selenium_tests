@@ -6,11 +6,11 @@ from .base_page import BasePage
 
 class ProductPage(BasePage):
     def should_not_be_success_message(self):
-        self.is_not_element_present(*ProductPageLocators.PRODUCT_IS_ADDED_TO_THE_BASKET_NAME_MESSAGE), \
+        assert self.is_not_element_present(*ProductPageLocators.PRODUCT_IS_ADDED_TO_THE_BASKET_NAME_MESSAGE), \
             'Success message with product name is presented, but should not be'
 
     def should_disappear_success_message(self):
-        self.is_disappeared(*ProductPageLocators.PRODUCT_IS_ADDED_TO_THE_BASKET_NAME_MESSAGE), \
+        assert self.is_disappeared(*ProductPageLocators.PRODUCT_IS_ADDED_TO_THE_BASKET_NAME_MESSAGE), \
             'Success message with product name does not disappear'
 
     def click_add_to_cart(self):
